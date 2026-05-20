@@ -20,9 +20,9 @@ public class MoneyTransferTest {
         var firstCard = getFirstCardInfo();
         var secondCard = getSecondCardInfo();
 
-        int amount = 123;
         int firstCardBalanceBefore = dashboardPage.getCardBalance(firstCard);
         int secondCardBalanceBefore = dashboardPage.getCardBalance(secondCard);
+        int amount = firstCardBalanceBefore / 2;
         int firstCardBalanceAfter = firstCardBalanceBefore - amount;
         int secondCardBalanceAfter = secondCardBalanceBefore + amount;
 
